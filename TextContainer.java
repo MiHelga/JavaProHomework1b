@@ -3,9 +3,17 @@ import java.io.IOException;
 
 @SaveTo(path="c:\\file.txt")
 public class TextContainer {
-    public String text;
+    private String text;
     public TextContainer(String text){
         this.text=text;
+    }
+
+    public void setText(String text){
+        this.text = text;
+    }
+
+    public String getText(){
+        return this.text;
     }
 
     @Saver
